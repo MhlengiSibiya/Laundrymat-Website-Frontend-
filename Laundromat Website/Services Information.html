@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qhakaza Laundry Services/Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Modak&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #2A5C82;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add this rule to target the logo specifically */
+.nav h1 {
+    transform: translateX(-20px); /* Adjust this value */
+    /* or use margin: */
+    margin-left: -20px; /* Alternative method */
+}
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            
+
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF7F50;
+        }
+
+
+        /* Add these styles */
+.nav-logo img {
+    height: 180px; /* Adjust based on your logo */
+    width: auto;
+    max-width: 1000px; /* Maximum logo width */
+    transition: transform 0.3s ease;
+    position: relative;
+    top:-65px;
+    left: -90px;
+}
+
+.nav-logo {
+        height: 50px; /* Smaller logo container */
+        max-width: 300px;
+    }
+
+.nav-logo:hover img {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Update existing nav styles */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Remove old h1 styles */
+.nav h1 {
+    display: none;
+}
+
+/* Keep existing .nav-links styles */
+@media (max-width: 768px) {
+
+}
+    </style>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <!-- Replace text with logo -->
+                <a href="Home.html" class="nav-logo">
+                    <img src="Logos/Logo1.png" alt="Qhakazi Laundry Services Logo">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="Home.html" class="home-link">Home</a>
+                    <a href="Home.html#services">Services</a>
+                    <a href="Home.html#pricing">Operating Hours</a>
+                    <a href="Home.html#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <section class="services-details">
+            <!-- Clothing Section (formerly Wash & Fold) -->
+            <div id="wash-fold" class="service-section1">
+                <h2>Clothing</h2>
+                <div class="service-content">
+                    <p>Our professional clothing service includes both a comprehensive wash, dry &amp; iron option and an iron only option. 
+                    For wash, dry &amp; iron service, pricing is R65 for small and medium items and Large R85 for larger garments, while iron only is R45. 
+                    We ensure each garment is treated with care using hypoallergenic detergents and temperature-controlled processes.</p>
+                    <div class="duration-box">
+                        <span>⏱️ Average Time: 4-6 hours</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Bedding Section (formerly Dry Cleaning) -->
+            <div id="dry-cleaning" class="service-section2">
+                <h2>Bedding</h2>
+                <div class="service-content">
+                    <p>Expert cleaning for your bedding items including blankets and comforters. 
+                    Single blankets/comforters are cleaned for R65, while double, queen, and king sizes are each available for R95.
+                    We use gentle cleaning solutions to maintain fabric quality and ensure fresh, hygienic bedding.</p>
+                    <div class="duration-box">
+                        <span>⏱️ Average Time: 48 hours</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Curtains Section (formerly Self-Service) -->
+            <div id="self-service" class="service-section3">
+                <h2>Curtains</h2>
+                <div class="service-content">
+                    <p>Professional cleaning of curtains to keep them bright and dust-free. 
+                    Our process ensures that all types of curtains are handled with care and cleaned thoroughly for only R95.
+                    Enjoy the benefits of our meticulous treatment that preserves the fabric and color integrity.</p>
+                    <div class="duration-box">
+                        <span>⏱️ Wash Cycle: 30 mins</span>
+                        <span>⏱️ Dry Cycle: 45 mins</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<div class="back-container">
+    <a href="Home.html" class="back-button">← Back to Home</a>
+</div>
+                
+
+<footer>
+    <p><strong>Qhakaza Laundry Services</strong> &mdash; First Gate, Emagarage</p>
+    <p>&copy; 2025 Qhakaza Laundry Services. All rights reserved.</p>
+    <p>Website developed by <a href="https://nxxtcreative.com" target="_blank">NxxtCreative</a></p>
+  </footer>
+  
+
+
+    
+    <style>
+    .services-details {
+        padding: 4rem 0rem;
+        max-width: 10000PX;
+        background: white;
+    
+    }
+
+    .service-section1{
+        background: linear-gradient(rgba(42,92,130,0.6), rgba(42,92,130,0.5)), /* Reduced opacity */ url('images/pexels-karolina-grabowska-4210378.jpg');
+         /* New adjustments */
+        background-size: cover;       /* Options: cover, contain, or exact dimensions */
+        background-position: center;  /* Options: top, bottom, 20% 75%, etc. */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-attachment: fixed; /* Parallax effect (optional) */
+        padding: 2.5rem;
+        border-radius: 0px;       
+        margin-bottom: 0rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        
+        color: #f8f9fa;
+
+    }
+    .service-section2{
+        background: linear-gradient(rgba(42,92,130,0.6), rgba(42,92,130,0.5)), /* Reduced opacity */ url('images/pexels-lribeirofotografia-2112648.jpg');
+         /* New adjustments */
+        background-size: cover;       /* Options: cover, contain, or exact dimensions */
+        background-position: center;  /* Options: top, bottom, 20% 75%, etc. */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-attachment: fixed; /* Parallax effect (optional) */
+        padding: 2.5rem;
+        border-radius: 0px;       
+        margin-bottom: 0rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        color: #f8f9fa;
+    }
+    .service-section3{
+        background:linear-gradient(rgba(42,92,130,0.6), rgba(42,92,130,0.5)), url('images/pexels-matreding-11213210.jpg');
+          /* New adjustments */
+          background-size: cover;       /* Options: cover, contain, or exact dimensions */
+        background-position: center;  /* Options: top, bottom, 20% 75%, etc. */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-attachment: fixed; /* Parallax effect (optional) */
+        padding: 3.5rem;
+        border-radius: 0px;       
+        margin-bottom: 0rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        color: #f8f9fa;
+    }
+
+    .service-section h2 {
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 6rem;
+    }
+    .service-section p{
+        font-size: 2.2rem;
+    }
+
+
+    .duration-box {
+        background: linear-gradient(rgba(42,92,130,0.6), rgba(42,92,130,0.5)), ;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        display: inline-block;
+    }
+
+    .back-container {
+        text-align: center;
+       
+        padding: 5rem 0rem;
+        max-width: 7000PX;
+        background: white;
+        
+        
+    }
+
+    .back-button {
+        background: #2A5C82;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        position: relative;
+        top:-40px ;
+    }
+
+    .back-button:hover {
+        background: #1a4261;
+    }
+        
+
+    footer {
+    background-color: #2A5C82;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+  }
+
+  footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    color: #E0E0E0;
+    text-decoration: none;
+  }
+
+    /* Maintain responsive design */
+    @media (max-width: 768px) {
+        .service-section {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+
+    <!-- Copy same JavaScript from index.html -->
+</body>
+</html>
+        
+    </body>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qhakaza Laundry Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Modak&display=swap" rel="stylesheet">
+
+    <script>
+        // Smooth scroll to section if URL has hash
+        window.addEventListener('DOMContentLoaded', () => {
+            if(window.location.hash) {
+                const section = document.querySelector(window.location.hash);
+                section?.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        
+// Home link behavior
+document.querySelector('.home-link').addEventListener('click', function(e) {
+    // Check if we're already on the homepage
+    const isHomePage = window.location.pathname.endsWith('index.html') || 
+                     window.location.pathname === '/';
+    
+    if(isHomePage) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Clear URL hash if present
+        history.replaceState(null, null, ' ');
+    }
+});
+
+
+        </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #2A5C82;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add this rule to target the logo specifically */
+.nav h1 {
+    transform: translateX(-20px); /* Adjust this value */
+    /* or use margin: */
+    margin-left: -20px; /* Alternative method */
+}
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            
+
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF7F50;
+        }
+
+
+        /* Add these styles */
+.nav-logo img {
+    height: 180px; /* Adjust based on your logo */
+    width: auto;
+    max-width: 1000px; /* Maximum logo width */
+    transition: transform 0.3s ease;
+    position: relative;
+    top:-65px;
+    left: -90px;
+}
+
+.nav-logo {
+        height: 50px; /* Smaller logo container */
+        max-width: 300px;
+    }
+
+.nav-logo:hover img {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Update existing nav styles */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Remove old h1 styles */
+.nav h1 {
+    display: none;
+}
+
+/* Keep existing .nav-links styles */
+@media (max-width: 768px) {
+
+}
+
+  
+    
+
+        .hero {
+            height: 80vh;
+    background: linear-gradient(rgba(42,92,130,0.6), rgba(42,92,130,0.5)), /* Reduced opacity */
+                url('images/pexels-mikebirdy-250290.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+    
+    /* Add contrast enhancement */
+    position: relative;
+
+    
+
+    background-size: 120% 120%;
+    animation: gradient-flow 15s ease infinite;
+}
+
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+        .hero-content h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1rem;
+            animation: slideUp 1s ease;
+            color:white;
+            -webkit-text-stroke: 1px #2A5C82;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            font-family: "Modak", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            
+            
+            
+            
+            
+        }
+        .hero-content p {
+            position: relative;
+            left: auto;   /* Move right */
+            top: -10px;   /* Move up */
+            font-size: 2.5rem;
+            
+            color: #ffffff;
+
+            font-family: "Archivo Narrow", sans-serif;
+            font-optical-sizing: auto;
+           
+        }
+
+        button{
+            position: relative;
+            left: auto;   /* Move right */
+            top: 20px;   /* Move up */
+        }
+        .services {
+            padding: 5rem 2rem;
+            max-width: 2200px;
+            margin: 0 auto;
+            background: url('images/9760716.jpg');
+        }
+        .services h2 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: -49px;   /* Move right */
+            top: 500px;   /* Move up */
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-item dt {
+    font-weight: 500;
+    color: #2A5C82;
+    flex: 2;
+}
+
+.price-item dd {
+    font-weight: 700;
+    color: #FF7F50;
+    margin-left: 1rem;
+    flex: 1;
+    text-align: right;
+}
+        .pricing h2{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: auto;   /* Move right */
+            top: 5px;   /* Move up */
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .pricing p{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: auto;   /* Move right */
+            top: 80px;   /* Move up */
+            font-size: 5.5rem;
+            position: relative;
+        }
+
+        .pricing {
+      
+    
+            padding: 5rem 2rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(
+        15deg,
+        rgba(119, 177, 216, 0.9) 0%,    /* Soft ice blue */
+        rgba(255, 255, 255, 0.95)) 100%  /* Warm white */
+        }
+
+        .pricing table th{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            left: 570px;
+            font-size: 1rem;
+            
+        }
+        .pricing table td{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            left: 570px;
+            font-size: 1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgb(255, 255, 255);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(1, 58, 157, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            min-height: 350px;
+        }
+
+       
+        .operating-hours {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.hours-container {
+    max-width: 500px;
+    margin: 2rem auto 0;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    max-width: 400px;
+    font-size: 3rem;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.days {
+    font-size: 1.5rem;
+    color: #2A5C82;
+    font-weight: 500;
+   
+}
+
+.times {
+    font-size: 1.5rem;
+    color: #FF7F50;
+    font-weight: 600;
+}
+
+.hours-note {
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+.hours-note2 {
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+    justify-self: center;
+    align-items: center ;
+    position: relative;
+    left: 540px ;
+    top: 10px;
+    font-size: large;
+}
+
+@media (max-width: 480px) {
+    .hours-row {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+    
+    .operating-hours {
+        padding: 3rem 1rem;
+    }
+}
+
+
+/* Add these new styles */
+.contact-numbers {
+    margin-bottom: 2rem;
+}
+
+.phone-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.phone-links a {
+    color: #FF7F50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.phone-links a:hover {
+    color: #FF6347;
+    text-decoration: underline;
+}
+        
+
+        .contact {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        input, textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #FF7F50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF6347;
+        }
+
+        footer {
+    background-color: #2A5C82;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+  }
+
+  footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    color: #E0E0E0;
+    text-decoration: none;
+  }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <!-- Replace text with logo -->
+            <a href="Home.html" class="nav-logo">
+                <img src="Logos/Logo1.png" alt="Qhakazi Laundry Services Logo">
+            </a>
+            
+            <div class="nav-links">
+                <a href="Home.html" class="home-link">Home</a>
+                <a href="Home.html#services">Services</a>
+                <a href="Home.html#pricing">Operating Hours</a>
+                <a href="Home.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Qhakaza Laundry Services</h1>
+            <p>Get the Dirt Away, We Keep it Clean!</p>
+            <button onclick="scrollToSection('services')">Explore Services</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services & Pricing</h2>
+        <div class="services-grid">
+             <!-- Clothing Card -->
+            <div class="service-card" data-service=>
+                <h3>Clothing</h3>
+                <dl class="price-list">
+                    <div class="price-item">
+                        <dt>Wash, Dry & Iron - Small</dt>
+                        <dd>R65</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>Wash, Dry & Iron - Medium</dt>
+                        <dd>R65</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>Wash, Dry & Iron - Large</dt>
+                        <dd>R85</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>Iron Only</dt>
+                        <dd>R45</dd>
+                    </div>
+                </dl>
+            </div>
+
+             <!-- Bedding Card -->
+            <div class="service-card"  data-service=>
+                <h3>Bedding</h3>
+                <dl class="price-list">
+                    <div class="price-item">
+                        <dt>Single Blanket/Comforter</dt>
+                        <dd>R65</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>Double Blanket</dt>
+                        <dd>R95</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>Queen Blanket</dt>
+                        <dd>R95</dd>
+                    </div>
+                    <div class="price-item">
+                        <dt>King Blanket</dt>
+                        <dd>R95</dd>
+                    </div>
+                </dl>
+            </div>
+
+             <!-- Other Items Card -->
+            <div class="service-card"  data-service=>
+                <h3>Other items</h3>
+                <dl class="price-list">
+                    <div class="price-item">
+                        <dt>Curtains</dt>
+                        <dd>R95</dd>
+                    </div>
+                </dl>
+            </div>
+
+        </div>
+        <r class="hours-note2">click on cards for more services information</r>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Operating Hours</h2>
+        <div class="hours-container">
+            <div class="hours-row">
+                <span class="days">Weekdays</span>
+                <span class="times">7:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+                <span class="days">Weekends</span>
+                <span class="times">7:30 AM - 5:00 PM</span>
+            </div>
+            <r class="hours-note">Last laundry acceptance 1 hour before closing</r>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        
+        <!-- Add this phone numbers section -->
+        <div class="contact-numbers">
+            <p>Call us directly:</p>
+            <div class="phone-links">
+                <a href="tel:0745000656">📞 074 500 0656</a>
+                <a href="tel:0625460817">📞 062 546 0817</a>
+            </div>
+        </div>
+    
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p><strong>Qhakaza Laundry Services</strong> &mdash; First Gate, Emagarage</p>
+        <p>&copy; 2025 Qhakaza Laundry Services. All rights reserved.</p>
+        <p>Website developed by <a href="https://nxxtcreative.com" target="_blank">NxxtCreative</a></p>
+      </footer>
+      
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will respond shortly.');
+            event.target.reset();
+        }
+
+        // Add animation on scroll
+        window.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if(cardTop < window.innerHeight - 100) {
+                    card.style.opacity = '1';
+                }
+            });
+        });
+
+        // Initial card opacity set for animation
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transition = 'opacity 1s ease';
+        });
+
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        // Only handle same-page section links
+        if(window.location.pathname === this.pathname) {
+            e.preventDefault();
+            const section = document.querySelector(this.hash);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Add this JavaScript at the bottom of your file
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const service = this.dataset.service;
+        window.location.href = `Services%20Information.html${service}`;
+    });
+});
+    </script>
+</body>
+</html>
