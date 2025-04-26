@@ -1,2 +1,2 @@
-# MhlengiS's Repository(1)
-Projects that I created using the ffg languages: C#, SQL, HTML, CSS, JavaScript
+Laundrymat Website (Frontend)
+Project that I created using the following languages: HTML, CSS, JavaScript
